@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Inácios">
+  <rect width="100%" height="100%" rx="12" fill="#0f172a" />
+  <circle cx="32" cy="24" r="12" fill="#06b6d4" />
+  <text x="32" y="44" font-family="Inter, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" alignment-baseline="middle">GI</text>
+</svg>
