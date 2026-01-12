@@ -8,7 +8,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Mail, text: "Departamento de Comunicação: contato@grupoinacios.com", href: "mailto:contato@grupoinacios.com" },
     { icon: Mail, text: "Departamento Comercial: depcomercial@grupoinacios.com", href: "mailto:depcomercial@grupoinacios.com" },
-    { icon: Phone, text: "+244 94933 139 566 / 924 794 016" },
+    { icon: Phone, text: "+244 933 139 566 / 941 794 016" },
     { icon: MapPin, text: "Angola, Luanda, Avenida Universitária Dr. Agostinho Neto Ulengo Center" },
   ];
 
