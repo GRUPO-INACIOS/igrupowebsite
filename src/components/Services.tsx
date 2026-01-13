@@ -1,101 +1,134 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Building2, Mic2, Heart, User } from "lucide-react";
+import { Building2, Mic2, Heart, User, Check, ArrowRight } from "lucide-react";
 
 const packages = [
 	{
 		icon: Building2,
-		title: "Pacotes para Empresas",
+		title: "Empresas",
+		badge: "Corporate",
 		description:
-			"Soluções completas de branding, marketing digital, eventos corporativos e presença online para empresas de todos os portes.",
+			"Branding, marketing digital e presença online para negócios.",
 		features: ["Identidade Visual", "Marketing Digital", "Eventos Corporativos", "Websites e Sistemas"],
+		color: "text-blue-500",
+		bg: "bg-blue-500/10"
 	},
 	{
 		icon: Mic2,
-		title: "Pacotes para Artistas",
+		title: "Artistas",
+		badge: "Creative",
 		description:
-			"Produções audiovisuais, gestão de redes sociais, divulgação de trabalhos e cobertura de eventos artísticos.",
-		features: ["Clipes e Vídeos Líricos", "Gestão de Redes Sociais", "Fotografia Profissional", "Promoção Digital"],
+			"Produções audiovisuais e gestão de carreira digital.",
+		features: ["Clipes e Vídeos", "Redes Sociais", "Fotografia", "Promoção Digital"],
+		color: "text-purple-500",
+		bg: "bg-purple-500/10"
 	},
 	{
 		icon: Heart,
-		title: "Pacotes para I Média",
+		title: "I Média",
+		badge: "Memories",
 		description:
-			"Planejamento completo, cobertura fotográfica e audiovisual, decoração e gestão de eventos especiais.",
-		features: ["Casamentos", "Aniversários", "Formaturas", "Eventos Corporativos"],
+			"Cobertura e gestão de eventos especiais e sociais.",
+		features: ["Casamentos", "Aniversários", "Formaturas", "Eventos Sociais"],
+		color: "text-rose-500",
+		bg: "bg-rose-500/10"
 	},
 	{
 		icon: User,
-		title: "Pacotes Individuais",
+		title: "Individual",
+		badge: "Personal",
 		description:
-			"Ensaios fotográficos, desenvolvimento pessoal, consultoria profissional e criação de portfólios digitais.",
-		features: ["Ensaios Fotográficos", "Portfólios Digitais", "Consultoria de Carreira", "Presença Digital"],
+			"Ensaios, consultoria e portfólios profissionais.",
+		features: ["Ensaios Fotos", "Portfólios", "Consultoria", "Presença Digital"],
+		color: "text-emerald-500",
+		bg: "bg-emerald-500/10"
 	},
 ];
 
 const Services = () => {
 	return (
-		<section id="servicos" className="py-24 bg-primary text-primary-foreground">
-			<div className="container mx-auto px-6">
+		<section id="servicos" className="py-24 relative overflow-hidden bg-background">
+			{/* Background Pattern */}
+			<div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
+			<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -z-10" />
+
+			<div className="container mx-auto px-6 relative z-10">
 				{/* Título da seção */}
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 					viewport={{ once: true, margin: "-100px" }}
-					className="text-center mb-16"
+					className="text-center mb-20"
 				>
-					<h2 className="text-4xl md:text-5xl font-bold mb-4">Serviços e Pacotes</h2>
-					<p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-						Escolha o pacote ideal para suas necessidades
+					<span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Planos e Pacotes</span>
+					<h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+						Soluções sob <span className="text-primary">Medida</span>
+					</h2>
+					<p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+						Escolha o pacote ideal para impulsionar sua marca ou eternizar seus momentos especiais.
 					</p>
 				</motion.div>
 
 				{/* Cards de pacotes */}
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
 					{packages.map((pkg, index) => (
 						<motion.div
 							key={pkg.title}
-							initial={{ opacity: 0, y: 50 }}
+							initial={{ opacity: 0, y: 40 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: index * 0.1 }}
 							viewport={{ once: true, amount: 0.2 }}
-							className="bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-xl p-8 hover:bg-primary-foreground/10 transition-all duration-300"
+							className="group relative flex flex-col p-8 bg-card/40 backdrop-blur-md border border-border/50 rounded-[2.5rem] hover:border-primary/30 transition-all duration-500"
 						>
-							<pkg.icon className="h-12 w-12 text-primary-foreground mb-4" />
-							<h3 className="text-2xl font-bold mb-3">{pkg.title}</h3>
-							<p className="text-primary-foreground/80 mb-6 leading-relaxed">{pkg.description}</p>
+							<div className="flex justify-between items-start mb-8">
+								<div className={`p-4 ${pkg.bg} rounded-2xl group-hover:scale-110 transition-transform duration-500`}>
+									<pkg.icon className={`h-7 w-7 ${pkg.color}`} />
+								</div>
+								<span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50 border border-border/50 px-3 py-1 rounded-full">
+									{pkg.badge}
+								</span>
+							</div>
 
-							<ul className="space-y-2 mb-6">
+							<h3 className="text-2xl font-bold mb-3 tracking-tight">{pkg.title}</h3>
+							<p className="text-muted-foreground text-sm mb-8 leading-relaxed">
+								{pkg.description}
+							</p>
+
+							<div className="space-y-4 mb-10 flex-grow">
 								{pkg.features.map((feature) => (
-									<li
+									<div
 										key={feature}
-										className="flex items-center text-sm text-primary-foreground/80"
+										className="flex items-center gap-3 text-sm text-foreground/70"
 									>
-										<span className="mr-2">•</span>
+										<div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+											<Check className="h-3 w-3 text-primary" />
+										</div>
 										{feature}
-									</li>
+									</div>
 								))}
-							</ul>
+							</div>
 
-							{/* Botão WhatsApp com mensagem pré-preenchida */}
-							<motion.div
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5 }}
+							{/* Botão WhatsApp */}
+							<a
+								href={`https://wa.me/244933139566?text=${encodeURIComponent(
+									`Olá, quero solicitar um orçamento do pacote: ${pkg.title}`
+								)}`}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="block mt-auto"
 							>
-								<a
-									href={`https://wa.me/244933139566?text=${encodeURIComponent(
-										`Olá, quero solicitar um orçamento do pacote: ${pkg.title}`
-									)}`}
-									target="_blank"
-									rel="noopener noreferrer"
+								<Button
+									variant="outline"
+									className="w-full rounded-2xl py-6 h-auto border-border hover:bg-primary hover:text-white hover:border-primary transition-all duration-500 group/btn"
 								>
-									<Button variant="hero" className="w-full">
-										Solicitar Orçamento
-									</Button>
-								</a>
-							</motion.div>
+									Orçamento
+									<ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+								</Button>
+							</a>
+
+							{/* Hover Glow Effect */}
+							<div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem] pointer-events-none" />
 						</motion.div>
 					))}
 				</div>
