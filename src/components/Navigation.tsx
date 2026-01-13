@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import icon from "../assets/images/icon.png"
+import icon2 from "../assets/images/icon2.png"
 
 const navItems = [
   { name: "Início", href: "#" },
@@ -52,7 +54,7 @@ const Navigation = () => {
               onClick={() => scrollToSection("#")}
               className={`text-2xl font-bold hover:opacity-80 transition-all ${isScrolled || isMobileMenuOpen ? "text-black md:text-gray-900" : "text-white md:text-white"}`}
             >
-              Grupo Inácios
+              <img src={isScrolled ? icon : icon2} width={150} />
             </button>
 
             {/* Desktop Navigation */}

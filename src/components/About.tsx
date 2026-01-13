@@ -25,17 +25,17 @@ const About = () => {
             Sobre Nós
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            O <span className="font-semibold text-foreground">Grupo Inácios</span> é um coletivo de excelência, formado por cinco empresas
+            O <span className="font-semibold text-foreground">Grupo Inácios</span> é um coletivo de excelência, formado por seis empresas
             especializadas que atuam de forma integrada para oferecer soluções completas nas áreas
             de imagem, comunicação, eventos e formação profissional.
             Nosso propósito é eternizar momentos, impulsionar marcas e transformar ideias
             em experiências memoráveis. Do registro visual à estratégia digital, da produção
-            audiovisual à realização de eventos corporativos, cada empresa do grupo oferece
+            audiovisual à realização de eventos corporativos, e soluções tecnológicas, cada empresa do grupo oferece
             soluções personalizadas, criativas e eficazes para atender às mais diversas
             necessidades de nossos clientes.
           </p>
         </motion.div>
-
+        
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
           {segments.map((segment, index) => (
             <motion.div

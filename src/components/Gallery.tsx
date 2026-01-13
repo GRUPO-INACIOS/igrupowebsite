@@ -41,17 +41,17 @@ const getSrc = (img: ImageType): string => {
 import iprodImg from "../assets/iprod_1.jpg";
 import eventsImg from "../assets/events.jpg";
 
-import iphoto1 from "../assets/iphoto_1.jpg";
-import iphoto2 from "../assets/iphoto_2.jpg";
-import iphoto3 from "../assets/iphoto_3.jpg";
-import iphoto4 from "../assets/iphoto_4.jpg";
-import iphoto5 from "../assets/iphoto_5.jpg";
-import iphoto6 from "../assets/iphoto_6.jpg";
+import iphoto1 from "../assets/images/iphoto/iphoto_1.jpg";
+import iphoto2 from "../assets/images/iphoto/iphoto_2.jpg";
+import iphoto3 from "../assets/images/iphoto/iphoto_3.jpg";
+import iphoto4 from "../assets/images/iphoto/iphoto_4.jpg";
+import iphoto5 from "../assets/images/iphoto/iphoto_5.jpg";
+import iphoto6 from "../assets/images/iphoto/iphoto_6.jpg";
 
-import iacademy1 from "../assets/iacademy_1.jpg";
-import iacademy2 from "../assets/iacademy_2.jpg";
-import iacademy3 from "../assets/iacademy_3.jpg";
-import iacademy4 from "../assets/iacademy_4.jpg";
+import iacademy1 from "../assets/images/iacademy/iacademy_1.jpg";
+import iacademy2 from "../assets/images/iacademy/iacademy_2.jpg";
+import iacademy3 from "../assets/images/iacademy/iacademy_3.jpg";
+import iacademy4 from "../assets/images/iacademy/iacademy_4.jpg";
 
 const galleryItems: Record<string, GalleryItem[]> = {
   photos: [
