@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Heart } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import icon from "../assets/images/icon.png"
@@ -122,34 +122,73 @@ const Navigation = () => {
 			</motion.nav>
 
 			{/* Mobile Menu */}
-			{isMobileMenuOpen && (
-				<motion.div
-					initial={{ opacity: 0, y: -20 }}
-					animate={{ opacity: 1, y: 0 }}
-					exit={{ opacity: 0, y: -20 }}
-					className="fixed inset-0 z-40 bg-background pt-20 md:hidden"
-				>
-					<div className="container mx-auto px-6 py-8">
-						<div className="flex flex-col gap-6">
-							{navItems.map((item) => (
-								<button
-									key={item.name}
-									onClick={() => handleNavClick(item)}
-									className={item.isExternal
-										? "w-full p-4 rounded-2xl bg-primary text-white font-bold text-center flex items-center justify-center gap-3 mt-4 active:scale-95 transition-all"
-										: "text-2xl font-semibold transition-all text-left w-fit text-black hover:text-gray-700"
-									}
+			<AnimatePresence>
+				{isMobileMenuOpen && (
+					<>
+						{/* Backdrop Overlay */}
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							onClick={() => setIsMobileMenuOpen(false)}
+							className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[55] md:hidden"
+						/>
+
+						<motion.div
+							initial={{ y: "-100%" }}
+							animate={{ y: 0 }}
+							exit={{ y: "-100%" }}
+							transition={{ type: "spring", damping: 25, stiffness: 200 }}
+							className="fixed top-0 left-0 right-0 z-[60] bg-background md:hidden flex flex-col rounded-b-[2rem] shadow-2xl overflow-hidden"
+						>
+							{/* Mobile Menu Header */}
+							<div className="flex items-center justify-between h-20 px-6 border-b border-border/50">
+								<Link
+									to="/"
+									onClick={() => handleNavClick(navItems[0])}
+									className="text-2xl font-bold"
 								>
-									<span className="flex items-center gap-2">
-										{item.isExternal && <Heart className="h-5 w-5 fill-current text-primary animate-pulse" />}
-										{item.name}
-									</span>
+									<img src={icon} width={130} alt="Logo" />
+								</Link>
+								<button
+									onClick={() => setIsMobileMenuOpen(false)}
+									className="text-black p-2 hover:bg-gray-100 rounded-full transition-colors"
+									aria-label="Close menu"
+								>
+									<X className="h-6 w-6" />
 								</button>
-							))}
-						</div>
-					</div>
-				</motion.div>
-			)}
+							</div>
+
+							{/* Mobile Menu Items */}
+							<div className="px-6 py-8 max-h-[70vh] overflow-y-auto">
+								<div className="flex flex-col gap-4">
+									{navItems.map((item, index) => (
+										<motion.button
+											key={item.name}
+											initial={{ opacity: 0, x: -10 }}
+											animate={{ opacity: 1, x: 0 }}
+											transition={{ delay: 0.1 + index * 0.03 }}
+											onClick={() => handleNavClick(item)}
+											className={item.isExternal
+												? "w-full p-4 rounded-2xl bg-primary text-white font-bold text-center flex items-center justify-center gap-2 mt-2 active:scale-95 transition-all shadow-lg shadow-primary/20"
+												: "text-lg font-bold transition-all text-left w-fit text-black hover:text-primary active:scale-95 py-1"
+											}
+										>
+											<span className="flex items-center gap-2">
+												{item.isExternal && <Heart className="h-4 w-4 fill-current text-white animate-pulse" />}
+												{item.name}
+											</span>
+										</motion.button>
+									))}
+								</div>
+							</div>
+
+							{/* Bottom Accent */}
+							<div className="h-2 bg-primary/10 w-full" />
+						</motion.div>
+					</>
+				)}
+			</AnimatePresence>
 		</>
 	);
 };
