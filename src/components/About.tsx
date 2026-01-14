@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Camera, Video, Megaphone, Calendar, GraduationCap, Code2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import aboutImg from "@/assets/images/iphoto/iphoto_1.jpg";
+import aboutImg from "@/assets/images/iacademy/iacademy_1.jpg";
 
 const segments = [
 	{ icon: Camera, title: "Fotografia Profissional" },
