@@ -61,7 +61,7 @@ const Services = () => {
 					viewport={{ once: true, margin: "-100px" }}
 					className="text-center mb-20"
 				>
-					<span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Planos e Pacotes</span>
+					<span className="text-white font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Planos e Pacotes</span>
 					<h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
 						Soluções sob Medida
 					</h2>

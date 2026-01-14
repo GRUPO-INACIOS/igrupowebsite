@@ -32,7 +32,7 @@ const SocialAction = () => {
 						transition={{ duration: 0.8 }}
 					>
 						<span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-md border border-white/10 text-white text-sm font-bold uppercase tracking-widest mb-6">
-							<Heart className="h-4 w-4 text-primary" /> Responsabilidade Social
+							<Heart className="h-4 w-4 text-" /> Responsabilidade Social
 						</span>
 						<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
 							Janeiro Solidário
@@ -54,7 +54,10 @@ const SocialAction = () => {
 						>
 							<h2 className="text-3xl md:text-4xl font-bold mb-8">O Projeto</h2>
 							<p className="text-xl text-muted-foreground leading-relaxed">
-								O <span className="text-foreground font-semibold">JANEIRO SOLIDÁRIO</span> nasceu em 2024 e executou suas ações em 2025 para combater a vulnerabilidade extrema no bairro <span className="text-primary font-medium">Mayé-Mayé</span>, Distrito Urbano do Sequele.
+								O <span className="text-foreground font-semibold">Grupo Inácios</span>, com o intuito de poder oferecer um janeiro diferente às famílias que passam dificuldades, tirando o conceito de janeiro o mês da Fome, criou o projecto anual o <span className="text-foreground font-semibold">Janeiro Solidário</span>.
+							</p>
+							<p className="text-xl text-muted-foreground leading-relaxed mt-4">
+								Este projecto visa ajudar famílias mais necessitadas, pois bem sabemos que por mais que seja um mês da fome, tem sempre alguém disposto a ajudar. O projeto nasceu em 2024 e executou suas ações em 2025 para combater a vulnerabilidade extrema no bairro <span className="text-primary font-medium">Mayé-Mayé</span>, Distrito Urbano do Sequele.
 							</p>
 						</motion.div>
 
@@ -154,7 +157,9 @@ const SocialAction = () => {
 							<span className="text-primary">•</span>
 							<span>I Eventos</span>
 							<span className="text-primary">•</span>
-							<span>I Academy</span>
+							<span>I Acadmy</span>
+							<span className="text-primary">•</span>
+							<span>I Tech</span>
 						</div>
 
 						<div className="inline-flex p-8 bg-card border border-border rounded-[2rem] text-left max-w-2xl mx-auto group hover:border-primary/30 transition-all">
