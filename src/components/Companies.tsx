@@ -19,6 +19,7 @@ const companies = [
 			"Fotogafias comerciais",
 		],
 		image: iphotoImg,
+		instagram: "https://www.instagram.com/inaciophotos.gi?igsh=cDhlMm8ycWNmejJ4",
 	},
 	{
 		name: "I.M Produções",
@@ -30,6 +31,7 @@ const companies = [
 			"Pós-produção",
 		],
 		image: immImg,
+		instagram: "https://www.instagram.com/improducoes.gi?igsh=MWc5enNoajgxNnZlOQ==",
 	},
 	{
 		name: "I Media",
@@ -42,6 +44,7 @@ const companies = [
 		],
 		slogan: "Inovamos para impulsionar o seu futuro.",
 		image: imediaImg,
+		instagram: "https://www.instagram.com/imedia.gi?igsh=MTV5YXlyaDA4NTE3Nw==",
 	},
 	{
 		name: "I Eventos",
@@ -53,6 +56,7 @@ const companies = [
 			"Eventos corporativos e empresariais",
 			"Animação e entretenimento",
 		],
+		instagram: "https://www.instagram.com/ieventos.gi?igsh=aTl2d2w2Y2R6NXJm",
 	},
 	{
 		name: "I Academy",
@@ -64,6 +68,7 @@ const companies = [
 			"formação inicial e qualificação profissional",
 		],
 		image: iacademy,
+		instagram: "https://www.instagram.com/iacadmy.gi?igsh=OGE3eWQweG54OWc3",
 	},
 	{
 		name: "I Tech Solutions",
@@ -77,6 +82,7 @@ const companies = [
 		],
 		slogan: "Inovamos para impulsionar o seu futuro.",
 		image: technologyImg,
+		instagram: "https://www.instagram.com/itechsolutions.gi?igsh=MTBlZGxiejBpZXk4YQ==",
 	},
 ];
 
@@ -144,9 +150,15 @@ const CompanyCard = ({ company, index }: { company: typeof companies[0]; index: 
 						)}
 
 						<div className="mt-6">
-							<Button variant="outline" className="w-full text-xs h-10 group/btn hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-								Saiba mais
-								<ArrowRight className="ml-2 h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform" />
+							<Button
+								variant="outline"
+								className="w-full text-xs h-10 group/btn hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+								asChild
+							>
+								<a href={company.instagram} target="_blank" rel="noopener noreferrer">
+									Saiba mais
+									<ArrowRight className="ml-2 h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform" />
+								</a>
 							</Button>
 						</div>
 					</div>

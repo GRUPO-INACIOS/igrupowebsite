@@ -57,7 +57,7 @@ const SocialAction = () => {
 								O <span className="text-foreground font-semibold">Grupo Inácios</span>, com o intuito de poder oferecer um janeiro diferente às famílias que passam dificuldades, tirando o conceito de janeiro o mês da Fome, criou o projecto anual o <span className="text-foreground font-semibold">Janeiro Solidário</span>.
 							</p>
 							<p className="text-xl text-muted-foreground leading-relaxed mt-4">
-								Este projecto visa ajudar famílias mais necessitadas, pois bem sabemos que por mais que seja um mês da fome, tem sempre alguém disposto a ajudar. O projeto nasceu em 2024 e executou suas ações em 2025 para combater a vulnerabilidade extrema no bairro <span className="text-primary font-medium">Mayé-Mayé</span>, Distrito Urbano do Sequele.
+								Este projecto visa ajudar famílias mais necessitadas, pois bem sabemos que por mais que seja um mês da fome, tem sempre alguém disposto a ajudar. O projeto nasceu em 2024 e executou a sua primeira ação em 2025 na comunidade do <span className="text-primary font-medium">Maye Maye</span>, Distrito Urbano do Sequele.
 							</p>
 						</motion.div>
 
