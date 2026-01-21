@@ -36,11 +36,11 @@ const About = () => {
 						</h2>
 						<div className="w-20 h-1 bg-primary/20 rounded-full mb-8" />
 						<p className="text-lg text-muted-foreground leading-relaxed mb-8">
-							O <span className="font-semibold text-foreground">Grupo Inácios</span> é um coletivo de excelência, formado por cinco empresas
+							O <span className="font-semibold text-foreground">Grupo Inácios</span> é um coletivo de excelência, formado por seis empresas
 							especializadas que atuam de forma integrada para oferecer soluções completas nas áreas
-							de imagem, comunicação, eventos e formação profissional. Nosso propósito é eternizar momentos,
+							de imagem, comunicação, eventos, formação profissional e tecnologia. Nosso propósito é eternizar momentos,
 							impulsionar marcas e transformar ideias em experiências memoráveis. Do registro visual à estratégia digital,
-							da produção audiovisual à realização de eventos corporativos, cada empresa do grupo oferece soluções personalizadas,
+							da produção audiovisual à solução tecnológica, cada empresa do grupo oferece soluções personalizadas,
 							criativas e eficazes para atender às mais diversas necessidades de nossos clientes.
 						</p>
 						<Button variant="outline" className="group/btn hover:bg-primary hover:text-white transition-all duration-300">
