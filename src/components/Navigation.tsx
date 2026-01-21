@@ -79,7 +79,7 @@ const Navigation = () => {
 							onClick={() => handleNavClick(navItems[0])}
 							className={`text-2xl font-bold hover:opacity-80 transition-all ${isScrolled || isMobileMenuOpen ? "text-black" : "text-white"}`}
 						>
-							<img src={isScrolled || isMobileMenuOpen ? icon : icon2} width={150} alt="Logo" />
+							<img src={isScrolled || isMobileMenuOpen ? icon : icon2} width={100} alt="Logo" />
 						</Link>
 
 						<div className="hidden md:flex items-center gap-8">
