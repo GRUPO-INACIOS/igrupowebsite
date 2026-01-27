@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Inácios">
-  <rect width="100%" height="100%" rx="12" fill="#0f172a" />
-  <circle cx="32" cy="24" r="12" fill="#06b6d4" />
-  <text x="32" y="44" font-family="Inter, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" alignment-baseline="middle">GI</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Grupo Inácios">
+  <!-- Fundo preto -->
+  <rect width="100%" height="100%" fill="#000000" />
+  
+  <!-- Círculo branco com logo G -->
+  <circle cx="100" cy="100" r="85" fill="#ffffff" />
+  
+  <!-- Forma da letra G -->
+  <g fill="#000000">
+    <!-- Arco esquerdo -->
+    <path d="M 60 100 A 40 40 0 0 0 100 140 L 100 120 A 20 20 0 0 1 80 100 A 20 20 0 0 1 100 80 A 20 20 0 0 1 120 100 L 135 100 A 35 35 0 0 0 100 65 A 35 35 0 0 0 65 100" />
+    
+    <!-- Seta apontando para direita -->
+    <polygon points="130,85 155,100 130,115" />
+    <rect x="118" y="97" width="25" height="6" />
+  </g>
 </svg>
