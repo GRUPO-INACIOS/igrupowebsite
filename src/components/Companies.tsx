@@ -14,7 +14,7 @@ const companies = [
 		icon: Camera,
 		description: "Especializada em capturar histórias e eternizar emoções através de memórias fotográficas que perduram para sempre.",
 		services: [
-			"Sessões de fotográficas",
+			"Sessões fotográficas",
 			"Cobertura de eventos (casamentos, aniversários e mais.)",
 			"Fotogafias comerciais",
 		],
